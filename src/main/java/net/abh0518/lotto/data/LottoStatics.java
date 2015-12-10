@@ -71,7 +71,7 @@ public class LottoStatics {
     }
 
     private int[] generateNextNumbers(boolean highProbabilityFirst){
-        List<Integer> numberPool = new ArrayList<>();
+        List<Integer> numberPool = new ArrayList<Integer>();
         for(int i = 1 ; i < 46 ; i++){
             numberPool.add(i);
         }
@@ -82,7 +82,7 @@ public class LottoStatics {
         //6번의 번호 선출 페이즈를 돈다 (보너스 번호 포함이면 7번의 페이즈)
         for(int elect = 0 ; elect < electCount ; elect++){
             //페이즈 별로 번호 풀을 초기화 한다.
-            List<Integer> phaseNumberPool = new ArrayList<>();
+            List<Integer> phaseNumberPool = new ArrayList<Integer>();
             phaseNumberPool.addAll(numberPool);
 
             //페이즈 별 로또 번호 풀에 하나의 번호만 남을때 까지 선택되지 않은 순으로 번호를 쳐낸다.

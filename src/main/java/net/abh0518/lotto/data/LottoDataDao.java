@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class LottoDataDao {
 
-    List<LottoResult> originData = new ArrayList<>();
+    List<LottoResult> originData = new ArrayList<LottoResult>();
 
     public LottoDataDao() throws IOException, XPathExpressionException, ParseException {
         LottoDataDownloader downloader = new LottoDataDownloader();
@@ -86,7 +86,7 @@ public class LottoDataDao {
     }
 
     public List<LottoResult> getLottoResults(int startRecurrence, int endRecurrence){
-        List<LottoResult> result = new ArrayList<>();
+        List<LottoResult> result = new ArrayList<LottoResult>();
         for(int i = 0 ; i < originData.size() ; i++){
             LottoResult lotto = originData.get(i);
             if(lotto.getRecurrence() >= startRecurrence
@@ -98,7 +98,7 @@ public class LottoDataDao {
     }
 
     public List<LottoResult> getLottoResults(Date startDate, Date endDate){
-        List<LottoResult> result = new ArrayList<>();
+        List<LottoResult> result = new ArrayList<LottoResult>();
         for(int i = 0 ; i < originData.size() ; i++){
             LottoResult lotto = originData.get(i);
             long date = lotto.getDate().getTime();
